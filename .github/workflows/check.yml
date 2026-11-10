@@ -1,0 +1,19 @@
+name: Check website
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Use the npm version checked for Vercel
+        run: npm install --global npm@10.9.9
+      - run: npm ci
+      - run: npm test
+      - run: npm run test:ui
+      - run: npm run build

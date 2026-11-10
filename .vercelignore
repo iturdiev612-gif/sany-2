@@ -1,0 +1,13 @@
+.git
+.data
+.env*
+node_modules
+build
+dist
+outputs
+docs
+tests
+.cache
+.openai
+*.zip
+ДОСТУП-АДМИН.txt

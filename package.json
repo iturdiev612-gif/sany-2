@@ -1,0 +1,45 @@
+{
+  "name": "first-sany",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env.local server/local.mjs",
+    "build": "node scripts/build.cjs",
+    "build:sites": "node scripts/build.cjs --sites",
+    "dev": "react-scripts start",
+    "build:client": "react-scripts build",
+    "test": "node --test tests/*.test.mjs",
+    "test:ui": "react-scripts test --watchAll=false --runInBand"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
